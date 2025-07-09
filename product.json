@@ -1,0 +1,39 @@
+[
+    {
+      "id": 1,
+      "title": "Galaxy S24 Ultra",
+      "price": "₹ 1,449",
+      "mrp": "₹ 2,999",
+      "discount": "-52%",
+      "rating": "⭐⭐⭐⭐☆ (2,852)",
+      "badge": "Limited Time Deal",
+      "image": "/images/deals/Galaxy-S24-ULTRA.png",
+      "description": "Galaxy S24 Ultra with powerful processor and advanced camera features.",
+      "details": [
+        "12GB RAM",
+        "256GB Storage",
+        "5000mAh Battery",
+        "108MP Camera",
+        "Snapdragon Processor"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "iPhone 15 Pro Max",
+      "price": "₹ 1,29,999",
+      "mrp": "₹ 1,39,999",
+      "discount": "-7%",
+      "rating": "⭐⭐⭐⭐⭐ (1,950)",
+      "badge": "Best Seller",
+      "image": "/images/deals/M54.png",
+      "description": "The most powerful iPhone ever with A17 Pro chip and Titanium body.",
+      "details": [
+        "256GB Storage",
+        "6.7-inch Display",
+        "Triple Camera",
+        "Titanium Body",
+        "iOS 17"
+      ]
+    }
+  ]
+  
