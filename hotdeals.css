@@ -1,0 +1,45 @@
+.hot-deals-section {
+    background-color: #0f172a;
+    padding: 20px 20px;
+}
+
+.hot-deals-heading {
+    text-align: center;
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        font-weight: 700;
+        margin-bottom: 40px;
+        background: linear-gradient(45deg, #3b82f6, #06b6d4, #8b5cf6);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-shadow: 0 0 30px rgba(59, 130, 246, 0.3);
+        animation: titleGlow 3s ease-in-out infinite alternate;
+}
+
+.hot-deals-grid {
+    display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+}
+
+.hot-deals-item {
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.hot-deals-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Animate on visible */
+.hot-deals-item.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

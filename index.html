@@ -7,6 +7,7 @@
     <title>Kopil Dhara Mobiles - Latest Smartphones & Accessories</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="slider.css">
+    <link rel="stylesheet" href="hotdeals.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 
@@ -57,202 +58,194 @@
             </div>
         </div>
     </section>
-      
-    <section class="trending-products">
-        <div class="container">
-            <div class="header2">
-                <h2>Trending Products</h2>
-            </div>
-    
-            <div class="slider-container">
-                <!-- Play/Pause Button -->
-                <button class="control-btn play-pause-btn" id="playPauseBtn" aria-label="Pause slideshow">
-                    <span class="pause-icon">⏸️</span>
-                    <span class="play-icon" style="display: none;">▶️</span>
-                </button>
-    
-                <!-- Navigation Buttons -->
-                <button class="slider-btn prev-btn" id="prevBtn" aria-label="Previous">&#10094;</button>
-                <button class="slider-btn next-btn" id="nextBtn" aria-label="Next">&#10095;</button>
-    
-                <!-- Slider Wrapper -->
-                <div class="slider-wrapper" id="sliderWrapper">
-                    <div class="slider" id="slider">
-                        <!-- Slide Items -->
-                        <div class="slide" data-index="0">
-                            <div class="product-card">
-                                <div class="product-layout">
-                                    <div class="image-section">
-                                        <div class="badge new">New</div>
-                                        <div class="image-container">
-                                            <img src="/images/trending/Galaxy-A16.png" alt="Galaxy A16">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-section">
-                                        <div class="product-info">
-                                            <h3>Galaxy A16</h3>
-                                            <p class="price">$299</p>
-                                            <p class="description">Experience the perfect blend of performance and style
-                                                with the Galaxy A16. Featuring a stunning display and advanced camera
-                                                system.</p>
-                                            <div class="features">
-                                                <span class="feature">6.5" Display</span>
-                                                <span class="feature">50MP Camera</span>
-                                                <span class="feature">5000mAh Battery</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="glow-effect"></div>
-                            </div>
-                        </div>
-    
-                        <div class="slide" data-index="1">
-                            <div class="product-card">
-                                <div class="product-layout">
-                                    <div class="image-section">
-                                        <div class="badge hot">Hot</div>
-                                        <div class="image-container">
-                                            <img src="/images/trending/S25-.png" alt="Galaxy S25">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-section">
-                                        <div class="product-info">
-                                            <h3>Galaxy S25</h3>
-                                            <p class="price">$899</p>
-                                            <p class="description">The flagship Galaxy S25 delivers cutting-edge technology
-                                                with AI-powered features and professional-grade photography capabilities.
-                                            </p>
-                                            <div class="features">
-                                                <span class="feature">6.8" AMOLED</span>
-                                                <span class="feature">108MP Camera</span>
-                                                <span class="feature">Fast Charging</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="glow-effect"></div>
-                            </div>
-                        </div>
-    
-                        <div class="slide" data-index="2">
-                            <div class="product-card">
-                                <div class="product-layout">
-                                    <div class="image-section">
-                                        <div class="badge premium">Premium</div>
-                                        <div class="image-container">
-                                            <img src="/images/trending/S25-Ultra.png" alt="Galaxy S25 Ultra">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-section">
-                                        <div class="product-info">
-                                            <h3>Galaxy S25 Ultra</h3>
-                                            <p class="price">$1299</p>
-                                            <p class="description">The ultimate smartphone experience with S Pen
-                                                integration, advanced AI features, and unmatched performance for
-                                                professionals.</p>
-                                            <div class="features">
-                                                <span class="feature">6.9" Dynamic AMOLED</span>
-                                                <span class="feature">200MP Camera</span>
-                                                <span class="feature">S Pen Included</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="glow-effect"></div>
-                            </div>
-                        </div>
-    
-                        <div class="slide" data-index="3">
-                            <div class="product-card">
-                                <div class="product-layout">
-                                    <div class="image-section">
-                                        <div class="badge popular">Popular</div>
-                                        <div class="image-container">
-                                            <img src="/images/trending/Samsung-A56.png" alt="Samsung A56">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-section">
-                                        <div class="product-info">
-                                            <h3>Samsung A56</h3>
-                                            <p class="price">$399</p>
-                                            <p class="description">Affordable excellence with premium features. The A56
-                                                offers exceptional value with reliable performance and modern design.</p>
-                                            <div class="features">
-                                                <span class="feature">6.4" Super AMOLED</span>
-                                                <span class="feature">64MP Triple Camera</span>
-                                                <span class="feature">4500mAh Battery</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="glow-effect"></div>
-                            </div>
-                        </div>
-    
-                        <div class="slide" data-index="4">
-                            <div class="product-card">
-                                <div class="product-layout">
-                                    <div class="image-section">
-                                        <div class="badge trending">Trending</div>
-                                        <div class="image-container">
-                                            <img src="/images/trending/S25.png" alt="Galaxy S25">
-                                            <div class="image-overlay"></div>
-                                        </div>
-                                    </div>
-                                    <div class="info-section">
-                                        <div class="product-info">
-                                            <h3>Galaxy S25</h3>
-                                            <p class="price">$649</p>
-                                            <p class="description">Transform your productivity with advanced features.
-                                                Perfect for work, creativity, and entertainment.</p>
-                                            <div class="features">
-                                                <span class="feature">6.8" AMOLED Display</span>
-                                                <span class="feature">Advanced AI</span>
-                                                <span class="feature">Pro Camera</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="glow-effect"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-    
-                <!-- Dots Indicator -->
-                <div class="dots-container" id="dotsContainer">
-                    <!-- Dots will be generated by JavaScript -->
-                </div>
-    
-                <!-- Progress Bar -->
-                <div class="progress-container">
-                    <div class="progress-bar" id="progressBar"></div>
-                    <div class="progress-info">
-                        <span id="currentSlide">1</span>
-                        <span id="totalSlides">5</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    
-        <!-- Background Animation -->
-        <div class="bg-animation">
-            <div class="bg-circle bg-circle-1"></div>
-            <div class="bg-circle bg-circle-2"></div>
-        </div>
-    </section>
-  
+<!-- Trending Products Slider -->
+<div class="slider-container">
+    <h1 class="slider-title">Premium Collection</h1>
 
+    <div class="slider-wrapper">
+        <div class="slides-container">
+            <div class="slide active" data-index="0">
+                <div class="product-card">
+                    <div class="product-layout">
+                        <div class="image-section">
+                            <div class="badge trending">Trending</div>
+                            <div class="image-container">
+                                <img src="/images/slider/s25.jpg" alt="Galaxy S25">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <div class="product-info">
+                                <h3>Galaxy S25</h3>
+                                <p class="price">RS. 1,12,999</p>
+                                <p class="description">Transform your productivity with advanced features. Perfect for
+                                    work, creativity, and entertainment.</p>
+                                <div class="features">
+                                    <span class="feature">6.8" AMOLED Display</span>
+                                    <span class="feature">Advanced AI</span>
+                                    <span class="feature">Pro Camera</span>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="1">
+                <div class="product-card">
+                    <div class="product-layout">
+                        <div class="image-section">
+                            <div class="badge new">New</div>
+                            <div class="image-container">
+                                <img src="/images/slider/s25+.webp" alt="MacBook Pro">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <div class="product-info">
+                                <h3>Samsung Galaxy S25+ 5G </h3>
+                                <p class="price">RS 1,21,299</p>
+                                <p class="description">Supercharged by snapdragon 8 chip for incredible performance. Perfect for
+                                    professionals and creators.</p>
+                                <div class="features">
+                                    <span class="feature">Snapdragon Chip</span>
+                                    <span class="feature">12GB RAM</span>
+                                    <span class="feature">512GB SSD</span>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="2">
+                <div class="product-card">
+                    <div class="product-layout">
+                        <div class="image-section">
+                            <div class="badge sale">Sale</div>
+                            <div class="image-container">
+                                <img src="/images/slider/s25ultra.jpg" alt="AirPods Pro">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <div class="product-info">
+                                <h3> Samsung Galaxy Ultra</h3>
+                                <p class="price">RS 1,35,199</p>
+                                <p class="description">Samsung Galaxy S25 Ultra 5G Smartphone with Galaxy AI.</p>
+                                <div class="features">
+                                    <span class="feature">Snapdragon Chip</span>
+                                    <span class="feature">12GB RAM</span>
+                                    <span class="feature">512GB SSD</span>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="3">
+                <div class="product-card">
+                    <div class="product-layout">
+                        <div class="image-section">
+                            <div class="badge popular">Popular</div>
+                            <div class="image-container">
+                                <img src="/images/slider/a55.webp" alt="iPad Pro">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <div class="product-info">
+                                <h3>Samsung Galaxy A55 5G</h3>
+                                <p class="price">RS 55,899</p>
+                                <p class="description">| AI | Metal Frame | 50 MP Main Camera (OIS) | Super HDR Video| Nightography | IP67 | Corning Gorilla Glass Victus+ |
+                                sAMOLED Display.</p>
+                                <div class="features">
+                                    <span class="feature">12GB RAM</span>
+                                    <span class="feature">256GB Storage</span>
+                                    <span class="feature">Android 14</span>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+
+            <div class="slide" data-index="4">
+                <div class="product-card">
+                    <div class="product-layout">
+                        <div class="image-section">
+                            <div class="badge limited">Limited</div>
+                            <div class="image-container">
+                                <img src="images/slider/a56.webp" alt="Apple Watch">
+                                <div class="image-overlay"></div>
+                            </div>
+                        </div>
+                        <div class="info-section">
+                            <div class="product-info">
+                                <h3>Samsung Galaxy A56 5G</h3>
+                                <p class="price">RS 52,799</p>
+                                <p class="description">Metal Frame | Gemini Live | Awesome Intelligence (AI): Circle to Search, Instant Slo-Mo, Auto-Trim, Object Eraser |
+                                Flagship Grade Camera.</p>
+                                <div class="features">
+                                    <span class="feature">12GB RAM</span>
+                                    <span class="feature">256GB Storage</span>
+                                    <span class="feature">Android 14</span>
+                                </div>
+                                <button class="add-to-cart">Add to Cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="navigation nav-prev" id="prevBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="15,18 9,12 15,6"></polyline>
+            </svg>
+        </div>
+        <div class="navigation nav-next" id="nextBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="9,18 15,12 9,6"></polyline>
+            </svg>
+        </div>
+    </div>
+
+    <!-- Dots Indicator -->
+    <div class="dots-container" id="dotsContainer">
+        <div class="dot active" data-slide="0"></div>
+        <div class="dot" data-slide="1"></div>
+        <div class="dot" data-slide="2"></div>
+        <div class="dot" data-slide="3"></div>
+        <div class="dot" data-slide="4"></div>
+    </div>
+
+    <!-- Auto-play Toggle -->
+    <div class="controls">
+        <button class="control-btn" id="autoplayBtn">Pause Auto-play</button>
+    </div>
+</div>
+
+  
+    
 
     <!-- Categories Section -->
     <section class="categories">
+        <h2 class="hot-deals-heading">Categories</h2>
         <div class="container">
             <div class="category-grid">
+                
                 <div class="category-item">
                     <h3>Phones</h3>
                     <p>Starting At</p>
@@ -262,14 +255,7 @@
                     </div>
                 </div>
 
-                <div class="category-item">
-                    <h3>Phone Accessories</h3>
-                    <p>Starting At</p>
-                    <strong>₹ 799.00</strong>
-                    <div class="category-icon">
-                        <img src="/images/catogery/acc.png" alt="Phone Case" class="category-image">
-                    </div>
-                </div>
+
 
                 <div class="category-item">
                     <h3>Speakers</h3>
@@ -298,13 +284,55 @@
             </div>
         </div>
     </section>
-      
-
+      <!--hot deals section-->
+    <section class="hot-deals-section">
+        <h2 class="hot-deals-heading">Hot Deals</h2>
+        <div class="hot-deals-grid">
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal1.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal2.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal3.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal4.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal5.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal6.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal7.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal8.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal9.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal10.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal11.jpg" alt="Hot Deal Product">
+            </a>
+            <a href="product.html" class="hot-deals-item">
+                <img src="images/hotdeals/deal12.jpg" alt="Hot Deal Product">
+            </a>
+            <!-- Add more cards as needed -->
+        </div>
+    </section>
+   
     <!-- Best Deals Section -->
     <section class="deals">
         <div class="container">
             <div class="deals-header">
-                <h2>Best Deals</h2>
+                <h2 class="hot-deals-heading">Best Deals</h2>
                 
             </div>
             <div class="deals-grid">
@@ -333,16 +361,6 @@
                     <a href="product.html?id=2" class="full-link" aria-label="View Galaxy M54 details"></a>
                 </div>
 
-                <div class="deal-card">
-                    <img src="/images/deals/M54.png" alt="Power Bank" class="product-image">
-                    <h3 class="deal-title">Samsung Galaxy M54 5G</h3>
-                    <div class="deal-rating">⭐⭐⭐⭐☆ (2,852)</div>
-                    <div class="deal-badge limited">Limited Time Deal</div>
-                    <div class="deal-discount">-52%</div>
-                    <div class="deal-price">₹ 1,449</div>
-                    <div class="deal-mrp">M.R.P: ₹ 2,999</div>
-                    <a href="product.html?id=3" class="full-link" aria-label="View Galaxy M54"></a>
-                </div>
 
                 <div class="deal-card">
                     <img src="/images/deals/Galaxy-S24-ULTRA.png" alt="Power Bank" class="product-image">
@@ -527,8 +545,9 @@
     </footer>
       
 
-    <script src="script.js"></script>
     <script src="slider.js"></script>
+    <script src="hotdeals.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>

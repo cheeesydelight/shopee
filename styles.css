@@ -18,8 +18,8 @@ body.light-theme {
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
     background-color: var(--bg-color);
-        color: var(--text-color);
-        transition: background-color 0.3s ease, color 0.3s ease;
+    background-color: #0f172a;
+        color: #cbd5e1;
 }
 
 .container {
@@ -228,114 +228,27 @@ body {
     }
 }
 
-/* Trending Products Slider */
-.trending-products {
-    padding: 50px 0;
-    background: linear-gradient(90deg, #121212, #1e1e1e);
-    color: #fff;
-}
 
-.trending-products h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 20px;
-}
-
-.slider-wrapper {
-    position: relative;
-    overflow: hidden;
-}
-
-.slider {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease-in-out;
-}
-
-.slide {
-    flex: 0 0 calc(20% - 16px);
-    /* 5 Slides */
-    text-align: center;
-    background: #222;
-    border-radius: 15px;
-    padding: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.slide:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
-}
-
-.slide img {
-    width: 100%;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.slider-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.1);
-    border: none;
-    color: #fff;
-    font-size: 2rem;
-    padding: 10px 15px;
-    cursor: pointer;
-    z-index: 1;
-    border-radius: 50%;
-    transition: background 0.3s ease;
-}
-
-.slider-btn:hover {
-    background: rgba(255, 255, 255, 0.3);
-}
-
-.prev-btn {
-    left: 10px;
-}
-
-.next-btn {
-    right: 10px;
-}
-
-/* Responsive */
-@media (max-width: 1024px) {
-    .slide {
-        flex: 0 0 calc(33.333% - 16px);
-        /* 3 slides on tablet */
-    }
-}
-
-@media (max-width: 768px) {
-    .slide {
-        flex: 0 0 calc(50% - 16px);
-        /* 2 slides on mobile */
-    }
-}
-
-@media (max-width: 480px) {
-    .slide {
-        flex: 0 0 100%;
-        /* 1 slide on very small screens */
-    }
-}
 
 /* Categories Section */
 .categories {
-    padding: 4rem 0;
-    background: linear-gradient(135deg, #1f2c47, #2e3b5c, #202c52);
+   
+    background:#0f172a;
         background-size: 300% 300%;
         animation: gradientShift 15s ease infinite;
         color: #fff;
+        
 }
 
 .category-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 2rem;
+   
+   
+       
+        gap: 30px;
+        padding: 50px 20px;
+        padding-top: 10px;
 }
 
 .category-item {
@@ -396,7 +309,7 @@ transform: scale(1.1) rotateX(10deg) rotateY(10deg);
 
 .deals{
    
-    background: linear-gradient(135deg, #1f2c47, #2e3b5c, #202c52);
+    background: #0f172a;
         background-size: 300% 300%;
         animation: gradientShift 15s ease infinite;
         color: #fff;
@@ -505,7 +418,7 @@ transform: scale(1.1) rotateX(10deg) rotateY(10deg);
 /*poster */
 .poster-section {
     padding: 40px 0;
-    background: linear-gradient(135deg, #1f2c47, #2e3b5c, #202c52);
+    background: #0f172a;
     background-size: 300% 300%;
     animation: gradientShift 15s ease infinite;
     display: flex;
