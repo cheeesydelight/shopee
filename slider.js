@@ -344,3 +344,7 @@ window.addEventListener('resize', () => {
       sliderWrapper.style.display = '';
   }
 });
+
+  document.querySelector('.login-btn').addEventListener('click', function () {
+    window.location.href = 'Admin-Panel/login.html';
+  });
