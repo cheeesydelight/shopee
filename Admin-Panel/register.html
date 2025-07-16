@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - Modern Registration</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="registration-wrapper">
+            <div class="registration-container">
+                <div class="form-header">
+                    <h1>Create Your Account</h1>
+                    <p>Join us today and get started</p>
+                </div>
+
+                <form class="registration-form" id="registrationForm">
+                    <!-- Step 1: Basic Information -->
+                    <div class="form-section active" id="basicInfo">
+                        <div class="section-header">
+                            <h3>Personal Information</h3>
+                            <div class="step-indicator">
+                                <span class="step active">1</span>
+                                <span class="step">2</span>
+                                <span class="step">3</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="fullName" required>
+                            <label for="fullName">Full Name</label>
+                            <span class="input-highlight"></span>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="text" id="username" required>
+                            <label for="username">Username</label>
+                            <span class="input-highlight"></span>
+                            <div class="input-status" id="usernameStatus"></div>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="tel" id="phoneNumber" required>
+                            <label for="phoneNumber">Phone Number</label>
+                            <span class="input-highlight"></span>
+                            <div class="input-status" id="phoneStatus"></div>
+                        </div>
+
+                        <button type="button" class="btn-next" onclick="goToEmailVerification()">
+                            Continue
+                            <span class="arrow">→</span>
+                        </button>
+                    </div>
+
+                    <!-- Step 2: Email Verification -->
+                    <div class="form-section" id="emailVerification">
+                        <div class="section-header">
+                            <h3>Email Verification</h3>
+                            <div class="step-indicator">
+                                <span class="step completed">✓</span>
+                                <span class="step active">2</span>
+                                <span class="step">3</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                            <span class="input-highlight"></span>
+                            <div class="input-status" id="emailStatus"></div>
+                        </div>
+
+                        <button type="button" class="btn-send-otp" id="sendOtpBtn" onclick="sendOTP()">
+                            <span class="btn-text">Send Verification Code</span>
+                            <span class="btn-loading">Sending...</span>
+                        </button>
+
+                        <!-- OTP Input Section (Hidden initially) -->
+                        <div class="otp-section" id="otpSection" style="display: none;">
+                            <div class="otp-header">
+                                <h4>Enter Verification Code</h4>
+                                <p>We've sent a 6-digit code to <span id="emailDisplay"></span></p>
+                            </div>
+
+                            <div class="otp-container">
+                                <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 0)">
+                                <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 1)">
+                                <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 2)">
+                                <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 3)">
+                                <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 4)">
+                                <input type="text" class="otp-input" maxlength="1" oninput="moveToNext(this, 5)">
+                            </div>
+
+                            <div class="otp-timer">
+                                <p>Resend code in <span id="timer">60</span>s</p>
+                                <button type="button" class="resend-btn" id="resendBtn" onclick="resendOTP()" disabled>
+                                    Resend Code
+                                </button>
+                            </div>
+
+                            <button type="button" class="btn-verify" id="verifyBtn" onclick="verifyOTP()" disabled>
+                                Verify Email Address
+                            </button>
+                        </div>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn-back" onclick="goToBasicInfo()">
+                                ← Back
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Password Setup -->
+                    <div class="form-section" id="passwordSetup">
+                        <div class="section-header">
+                            <h3>Secure Your Account</h3>
+                            <div class="step-indicator">
+                                <span class="step completed">✓</span>
+                                <span class="step completed">✓</span>
+                                <span class="step active">3</span>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" id="password" required>
+                            <label for="password">Password</label>
+                            <span class="input-highlight"></span>
+                            <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                                <span class="eye-icon">👁️</span>
+                            </button>
+                        </div>
+
+                        <div class="password-strength" id="passwordStrength">
+                            <div class="strength-bar">
+                                <div class="strength-fill"></div>
+                            </div>
+                            <div class="strength-requirements">
+                                <div class="requirement" id="lengthReq">
+                                    <span class="req-icon">○</span>
+                                    At least 8 characters
+                                </div>
+                                <div class="requirement" id="uppercaseReq">
+                                    <span class="req-icon">○</span>
+                                    One uppercase letter
+                                </div>
+                                <div class="requirement" id="lowercaseReq">
+                                    <span class="req-icon">○</span>
+                                    One lowercase letter
+                                </div>
+                                <div class="requirement" id="numberReq">
+                                    <span class="req-icon">○</span>
+                                    One number
+                                </div>
+                                <div class="requirement" id="specialReq">
+                                    <span class="req-icon">○</span>
+                                    One special character
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="input-group">
+                            <input type="password" id="confirmPassword" required>
+                            <label for="confirmPassword">Confirm Password</label>
+                            <span class="input-highlight"></span>
+                            <button type="button" class="password-toggle" onclick="togglePassword('confirmPassword')">
+                                <span class="eye-icon">👁️</span>
+                            </button>
+                            <div class="input-status" id="confirmPasswordStatus"></div>
+                        </div>
+
+                        <button type="submit" class="btn-register" id="registerBtn">
+                            <span class="btn-text">Create Account</span>
+                            <span class="btn-loading">Creating Account...</span>
+                        </button>
+
+                        <div class="form-navigation">
+                            <button type="button" class="btn-back" onclick="goToEmailVerification()">
+                                ← Back
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Success Message -->
+                    <div class="form-section" id="successSection" style="display: none;">
+                        <div class="success-animation">
+                            <div class="success-checkmark">✓</div>
+                        </div>
+                        <div class="success-content">
+                            <h2>Account Created Successfully!</h2>
+                            <p>Welcome to our platform. You can now sign in with your credentials.</p>
+                            <button type="button" class="btn-login" onclick="redirectToLogin()">
+                                Go to Login
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="form-footer">
+                    <p>Already have an account? <a href="#" onclick="redirectToLogin()">Sign In</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>
+    (function () {
+        emailjs.init("EYO3o-qZS68NQnOHh"); // Replace with your actual public key
+    })();
+</script>
+    <script type="module" src="register.js"></script>
+
+</body>
+
+</html>

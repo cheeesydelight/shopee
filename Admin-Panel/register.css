@@ -1,0 +1,584 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    perspective: 1000px;
+}
+
+.registration-wrapper {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.registration-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    position: relative;
+    padding: 40px 35px;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h1 {
+    color: #333;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: #666;
+    font-size: 16px;
+}
+
+.registration-form {
+    position: relative;
+}
+
+.form-section {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+}
+
+.form-section.active {
+    opacity: 1;
+    transform: translateX(0);
+    position: relative;
+    pointer-events: all;
+}
+
+.section-header {
+    margin-bottom: 30px;
+}
+
+.section-header h3 {
+    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.step-indicator {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.step {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #e0e0e0;
+    color: #999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.step.active {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.3);
+}
+
+.step.completed {
+    background: #2ed573;
+    color: white;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 18px 0 18px 0;
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    background: transparent;
+    font-size: 16px;
+    color: #333;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    border-bottom-color: #667eea;
+}
+
+.input-group input:focus+label,
+.input-group input:valid+label {
+    top: -20px;
+    font-size: 12px;
+    color: #667eea;
+}
+
+.input-group label {
+    position: absolute;
+    top: 18px;
+    left: 0;
+    color: #999;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.input-highlight {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    transition: width 0.3s ease;
+}
+
+.input-group input:focus~.input-highlight {
+    width: 100%;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    color: #999;
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: #667eea;
+}
+
+.input-status {
+    position: absolute;
+    right: 0;
+    top: 18px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.input-status.valid {
+    color: #2ed573;
+}
+
+.input-status.invalid {
+    color: #ff4757;
+}
+
+.btn-next,
+.btn-register,
+.btn-login {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: white;
+    border: none;
+    padding: 18px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-next:hover,
+.btn-register:hover,
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(102, 126, 234, 0.3);
+}
+
+.btn-next .arrow {
+    margin-left: 10px;
+    transition: transform 0.3s ease;
+}
+
+.btn-next:hover .arrow {
+    transform: translateX(5px);
+}
+
+.btn-send-otp {
+    width: 100%;
+    background: #2ed573;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+    position: relative;
+}
+
+.btn-send-otp:hover {
+    background: #26d063;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(46, 213, 115, 0.3);
+}
+
+.btn-send-otp.loading {
+    pointer-events: none;
+}
+
+.btn-send-otp .btn-loading,
+.btn-register .btn-loading {
+    display: none;
+}
+
+.btn-send-otp.loading .btn-text,
+.btn-register.loading .btn-text {
+    display: none;
+}
+
+.btn-send-otp.loading .btn-loading,
+.btn-register.loading .btn-loading {
+    display: inline;
+}
+
+.otp-section {
+    margin-top: 30px;
+    padding: 25px;
+    background: rgba(102, 126, 234, 0.05);
+    border-radius: 15px;
+    border: 1px solid rgba(102, 126, 234, 0.1);
+}
+
+.otp-header {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.otp-header h4 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.otp-header p {
+    color: #666;
+    font-size: 14px;
+}
+
+.otp-container {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin: 25px 0;
+}
+
+.otp-input {
+    width: 50px !important;
+    height: 55px;
+    text-align: center;
+    border: 2px solid #e0e0e0 !important;
+    border-radius: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+.otp-input:focus {
+    border-color: #667eea !important;
+    box-shadow: 0 0 15px rgba(102, 126, 234, 0.2);
+    transform: scale(1.05);
+}
+
+.otp-timer {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.otp-timer p {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.resend-btn {
+    background: none;
+    border: none;
+    color: #667eea;
+    cursor: pointer;
+    font-size: 14px;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.resend-btn:hover:not(:disabled) {
+    color: #764ba2;
+}
+
+.resend-btn:disabled {
+    color: #ccc;
+    cursor: not-allowed;
+    text-decoration: none;
+}
+
+.btn-verify {
+    width: 100%;
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-verify:hover:not(:disabled) {
+    background: #5a6fd8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(102, 126, 234, 0.3);
+}
+
+.btn-verify:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
+.password-strength {
+    margin: 15px 0 25px 0;
+}
+
+.strength-bar {
+    width: 100%;
+    height: 6px;
+    background: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.strength-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #ff4757, #ffa502, #f39c12, #2ed573);
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
+
+.strength-requirements {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+}
+
+.requirement {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.requirement.met {
+    color: #2ed573;
+}
+
+.req-icon {
+    margin-right: 8px;
+    font-size: 10px;
+    transition: all 0.3s ease;
+}
+
+.requirement.met .req-icon {
+    color: #2ed573;
+}
+
+.requirement.met .req-icon::before {
+    content: "✓";
+}
+
+.form-navigation {
+    margin-top: 30px;
+}
+
+.btn-back {
+    background: none;
+    border: 2px solid #e0e0e0;
+    color: #666;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover {
+    border-color: #667eea;
+    color: #667eea;
+    background: rgba(102, 126, 234, 0.05);
+}
+
+.success-animation {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.success-checkmark {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #2ed573, #26d063);
+    color: white;
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 30px;
+    animation: checkmarkPulse 0.8s ease-out;
+}
+
+@keyframes checkmarkPulse {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.success-content {
+    text-align: center;
+}
+
+.success-content h2 {
+    color: #333;
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.success-content p {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.form-footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.form-footer p {
+    color: #666;
+    font-size: 14px;
+}
+
+.form-footer a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.form-footer a:hover {
+    color: #764ba2;
+}
+
+.error-message {
+    background: #ffe6e6;
+    color: #d63031;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-left: 4px solid #d63031;
+}
+
+.success-message {
+    background: #e6ffe6;
+    color: #00b894;
+    padding: 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    margin-bottom: 20px;
+    border-left: 4px solid #00b894;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 15px;
+    }
+
+    .registration-container {
+        padding: 30px 25px;
+    }
+
+    .form-header h1 {
+        font-size: 28px;
+    }
+
+    .otp-input {
+        width: 45px !important;
+        height: 50px;
+        font-size: 18px;
+    }
+
+    .strength-requirements {
+        grid-template-columns: 1fr;
+    }
+
+    .step {
+        width: 35px;
+        height: 35px;
+        font-size: 14px;
+    }
+}

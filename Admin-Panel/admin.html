@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | Kapil Dhara Mobiles</title>
+    <link rel="stylesheet" href="admin.css" />
+    <script defer src="admin.js"></script>
+</head>
+
+<body>
+    <header class="admin-header">
+        <div class="brand">
+            <div class="logo-circle">KD</div>
+            <span>KAPIL DHARA MOBILES</span>
+        </div>
+        <div class="header-actions">
+            <div class="search-box">
+                <input type="text" placeholder="Search..." />
+                <span class="search-icon">🔍</span>
+            </div>
+            <div class="profile-menu">
+                <div class="profile-avatar">A</div>
+                <span>Admin</span>
+            </div>
+            <button id="sidebarToggle" class="sidebar-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <div class="admin-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <nav class="sidebar-menu">
+                <a href="#" data-section="dashboard" class="menu-item active">
+                    <span class="icon">📊</span>
+                    <span class="text">Dashboard</span>
+                </a>
+                <a href="#" data-section="users" class="menu-item">
+                    <span class="icon">👥</span>
+                    <span class="text">Users</span>
+                </a>
+                <a href="#" data-section="orders" class="menu-item">
+                    <span class="icon">📦</span>
+                    <span class="text">Orders</span>
+                </a>
+                <a href="#" data-section="products" class="menu-item">
+                    <span class="icon">📱</span>
+                    <span class="text">Products</span>
+                </a>
+                <a href="#" data-section="settings" class="menu-item">
+                    <span class="icon">⚙️</span>
+                    <span class="text">Settings</span>
+                </a>
+                <div class="menu-divider"></div>
+                <a href="#" class="menu-item logout">
+                    <span class="icon">🚪</span>
+                    <span class="text">Logout</span>
+                </a>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Dashboard Section -->
+            <section id="dashboard" class="content-section active">
+                <div class="section-header">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here's what's happening with your store.</p>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat-card orders">
+                        <div class="stat-icon">📦</div>
+                        <div class="stat-content">
+                            <h3>Total Orders</h3>
+                            <div class="stat-number">124</div>
+                            <div class="stat-change positive">+12% from last month</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card users">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-content">
+                            <h3>Total Users</h3>
+                            <div class="stat-number">45</div>
+                            <div class="stat-change positive">+8% from last month</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card revenue">
+                        <div class="stat-icon">💰</div>
+                        <div class="stat-content">
+                            <h3>Revenue</h3>
+                            <div class="stat-number">₹2,56,000</div>
+                            <div class="stat-change positive">+15% from last month</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card products">
+                        <div class="stat-icon">📱</div>
+                        <div class="stat-content">
+                            <h3>Products</h3>
+                            <div class="stat-number">89</div>
+                            <div class="stat-change neutral">No change</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="dashboard-grid">
+                    <div class="chart-card">
+                        <h3>Sales Overview</h3>
+                        <div class="chart-placeholder">
+                            <div class="chart-bars">
+                                <div class="bar" style="height: 60%"></div>
+                                <div class="bar" style="height: 80%"></div>
+                                <div class="bar" style="height: 45%"></div>
+                                <div class="bar" style="height: 90%"></div>
+                                <div class="bar" style="height: 70%"></div>
+                                <div class="bar" style="height: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="recent-orders">
+                        <h3>Recent Orders</h3>
+                        <div class="order-list">
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <span class="order-id">#ORD-001</span>
+                                    <span class="customer">John Doe</span>
+                                </div>
+                                <span class="order-status pending">Pending</span>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <span class="order-id">#ORD-002</span>
+                                    <span class="customer">Jane Smith</span>
+                                </div>
+                                <span class="order-status completed">Completed</span>
+                            </div>
+                            <div class="order-item">
+                                <div class="order-info">
+                                    <span class="order-id">#ORD-003</span>
+                                    <span class="customer">Mike Johnson</span>
+                                </div>
+                                <span class="order-status processing">Processing</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Users Section -->
+            <section id="users" class="content-section">
+                <div class="section-header">
+                    <h1>Users Management</h1>
+                    <button class="btn-primary">Add New User</button>
+                </div>
+                <div class="content-card">
+                    <p>User management interface will be implemented here.</p>
+                </div>
+            </section>
+
+            <!-- Orders Section -->
+            <section id="orders" class="content-section">
+                <div class="section-header">
+                    <h1>Orders Management</h1>
+                    <button class="btn-primary">Export Orders</button>
+                </div>
+                <div class="content-card">
+                    <p>Order management interface will be implemented here.</p>
+                </div>
+            </section>
+
+            <!-- Products Section -->
+    <!-- Products Section -->
+    <!-- Products Section -->
+    <section id="products" class="content-section">
+        <div class="section-header">
+            <h1>Products Management</h1>
+            <button class="btn-primary">View All Products</button>
+        </div>
+    
+        <div class="products-grid">
+            <div class="product-category-card">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=120&width=120" alt="Phones" />
+                </div>
+                <div class="product-info">
+                    <h3>Mobile Phones</h3>
+                    <p>Smartphones, Feature phones, Accessories</p>
+                    <button class="add-product-btn" data-category="phones">
+                        <span class="btn-icon">📱</span>
+                        Add Phones
+                    </button>
+                </div>
+            </div>
+    
+            <div class="product-category-card">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=120&width=120" alt="Watches" />
+                </div>
+                <div class="product-info">
+                    <h3>Smart Watches</h3>
+                    <p>Fitness trackers, Smart watches, Bands</p>
+                    <button class="add-product-btn" data-category="watches">
+                        <span class="btn-icon">⌚</span>
+                        Add Watches
+                    </button>
+                </div>
+            </div>
+    
+            <div class="product-category-card">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=120&width=120" alt="Earphones" />
+                </div>
+                <div class="product-info">
+                    <h3>Audio Devices</h3>
+                    <p>Earphones, Earbuds, Headphones</p>
+                    <button class="add-product-btn" data-category="earphones">
+                        <span class="btn-icon">🎧</span>
+                        Add Earphones
+                    </button>
+                </div>
+            </div>
+    
+            <div class="product-category-card">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=120&width=120" alt="Speakers" />
+                </div>
+                <div class="product-info">
+                    <h3>Speakers</h3>
+                    <p>Bluetooth speakers, Home audio, Portable</p>
+                    <button class="add-product-btn" data-category="speakers">
+                        <span class="btn-icon">🔊</span>
+                        Add Speakers
+                    </button>
+                </div>
+            </div>
+    
+            <div class="product-category-card">
+                <div class="product-image">
+                    <img src="/placeholder.svg?height=120&width=120" alt="Accessories" />
+                </div>
+                <div class="product-info">
+                    <h3>Accessories</h3>
+                    <p>Cases, Chargers, Screen guards, Cables</p>
+                    <button class="add-product-btn" data-category="accessories">
+                        <span class="btn-icon">🔌</span>
+                        Add Accessories
+                    </button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="products-stats">
+            <div class="stat-item">
+                <span class="stat-label">Total Categories</span>
+                <span class="stat-value">5</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Active Products</span>
+                <span class="stat-value">89</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-label">Out of Stock</span>
+                <span class="stat-value">12</span>
+            </div>
+        </div>
+    
+        <!-- Dynamic Product Form -->
+        <div id="productFormContainer" class="product-form-container" style="display: none;">
+            <div class="form-header">
+                <h2 id="formTitle">Add Product</h2>
+                <button id="closeForm" class="close-form-btn">✕</button>
+            </div>
+    
+            <form id="dynamicProductForm" class="dynamic-product-form">
+                <!-- Form content will be dynamically inserted here -->
+            </form>
+        </div>
+    </section>
+
+
+            <!-- Settings Section -->
+            <section id="settings" class="content-section">
+                <div class="section-header">
+                    <h1>Settings</h1>
+                </div>
+                <div class="content-card">
+                    <p>System settings and configuration options will be available here.</p>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+
+</html>
