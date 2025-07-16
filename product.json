@@ -7,7 +7,7 @@
       "discount": "-52%",
       "rating": "⭐⭐⭐⭐☆ (2,852)",
       "badge": "Limited Time Deal",
-      "image": "/images/deals/Galaxy-S24-ULTRA.png",
+      "image": "images/deals/Galaxy-S24-ULTRA.png",
       "description": "Galaxy S24 Ultra with powerful processor and advanced camera features.",
       "details": [
         "12GB RAM",
@@ -25,7 +25,7 @@
       "discount": "-7%",
       "rating": "⭐⭐⭐⭐⭐ (1,950)",
       "badge": "Best Seller",
-      "image": "/images/deals/M54.png",
+      "image": "images/deals/M54.png",
       "description": "The most powerful iPhone ever with A17 Pro chip and Titanium body.",
       "details": [
         "256GB Storage",
